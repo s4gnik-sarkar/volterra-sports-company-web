@@ -1,0 +1,11 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-white text-ink font-sans antialiased; }
+h1,h2,h3,.display { @apply font-display uppercase tracking-tight leading-[.9]; }
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 font-display text-lg font-bold uppercase tracking-wide transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime; }
+  .btn-lime { @apply bg-lime text-ink hover:bg-white; }
+  .btn-dark { @apply bg-ink text-white hover:bg-char; }
+  .btn-line { @apply border border-current hover:bg-ink hover:text-white hover:border-ink; }
+  .wrap { @apply mx-auto w-full max-w-[1440px] px-5 md:px-10; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
